@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+            id="com.cordova.tabbar" version="1.0.0">
+        <name>TabBar</name>
+        <description>Cordova TabBar Plugin</description>
+        <license>Apache 2.0</license>
+        <keywords>cordova</keywords>
+        <js-module src="www/TabBar.js" name="tabBar">
+            <clobbers target="tabBar" />
+        </js-module>
+        <platform name="ios">
+            <config-file target="config.xml" parent="/*">
+                <feature name="TabBar">
+                    <param name="ios-package" value="TabBar"/>
+                </feature>
+            </config-file>
+
+            <header-file src="src/ios/TabBar.h" />
+
+            <source-file src="src/ios/TabBar.m" />
+        </platform>
+    </plugin>
